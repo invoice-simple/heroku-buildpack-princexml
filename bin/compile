@@ -7,10 +7,16 @@ echo "-----> Installing PrinceXML $PRINCE_VERSION"
   curl -s http://www.princexml.com/download/prince-$PRINCE_VERSION-linux-generic-x86_64.tar.gz | tar xzf -)
 
 
-ls -l
-ls -l $3
-cat $3/PRINCE_LICENSE
-if [ -f $3/PRINCE_LICENSE ]; then
+LICENSE_PATH=$3/PRINCE_LICENSE
+
+# https://devcenter.heroku.com/articles/buildpack-api#bin-compile
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+cat $1/LICENSE_PATH
+
+if [ -f ${LICENSE_PATH} ]; then
   echo "       Configuring license file"
   cp $3/PRINCE_LICENSE ./.downloads/prince-$PRINCE_VERSION-linux-generic-x86_64/lib/prince/license/license.dat
 else
