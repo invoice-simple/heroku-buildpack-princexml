@@ -7,7 +7,8 @@ echo "-----> Installing PrinceXML $PRINCE_VERSION"
   curl -s http://www.princexml.com/download/prince-$PRINCE_VERSION-linux-generic-x86_64.tar.gz | tar xzf -)
 
 
-ls
+ls -l
+ls -l $3
 cat $3/PRINCE_LICENSE
 if [ -f $3/PRINCE_LICENSE ]; then
   echo "       Configuring license file"
