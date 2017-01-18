@@ -7,7 +7,8 @@ echo "-----> Installing PrinceXML $PRINCE_VERSION"
   curl -s http://www.princexml.com/download/prince-$PRINCE_VERSION-linux-generic-x86_64.tar.gz | tar xzf -)
 
 
-LICENSE_PATH=$3/PRINCE_LICENSE
+LICENSE_PATH=$(cat $3/PRINCE_LICENSE)
+echo "        License path: ${LICENSE_PATH}"
 
 # https://devcenter.heroku.com/articles/buildpack-api#bin-compile
 BUILD_DIR=$1
