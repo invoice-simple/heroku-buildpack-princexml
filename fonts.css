@@ -12,6 +12,11 @@
 }
 
 @font-face {
+    font-family: serif; /* last resort font */
+    src: prince-lookup("Arial Unicode MS")
+}
+
+@font-face {
     font-family: serif; /* Thai */
     src: prince-lookup("Thonburi")
 }
