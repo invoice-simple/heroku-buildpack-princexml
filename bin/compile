@@ -39,4 +39,4 @@ ls $ENV_DIR
 echo '...$0'
 ls $0
 echo '... copy fonts.css'
-cp $CACHE_DIR/fonts.css $BUILD_DIR/lib/prince/style
+cp $(dirname $0)/../fonts.css $BUILD_DIR/lib/prince/style
