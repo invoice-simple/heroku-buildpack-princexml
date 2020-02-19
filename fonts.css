@@ -5,7 +5,6 @@
 
 /* standard "serif" font family */
 
-
 @font-face {
     font-family: serif; /* last resort font */
     src: prince-lookup("Arial")
