@@ -30,8 +30,13 @@ exec /app/lib/prince/bin/prince --prefix="/app/lib/prince" "\$@"
 EOF
 
 echo '...install custom fonts.css'
+echo '...cache dir'
 ls $CACHE_DIR
+echo '...build dir'
 ls $BUILD_DIR
+echo '...env dir'
+ls $ENV_DIR
+echo '...$0'
 ls $0
-echo '...'
+echo '... copy fonts.css'
 cp $CACHE_DIR/fonts.css $BUILD_DIR/lib/prince/style
