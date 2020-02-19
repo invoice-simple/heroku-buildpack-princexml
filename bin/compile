@@ -29,5 +29,9 @@ cat >$1/bin/prince <<EOF
 exec /app/lib/prince/bin/prince --prefix="/app/lib/prince" "\$@"
 EOF
 
+echo '...install custom fonts.css'
 ls $CACHE_DIR
+ls $BUILD_DIR
+ls $0
+echo '...'
 cp $CACHE_DIR/fonts.css $BUILD_DIR/lib/prince/style
