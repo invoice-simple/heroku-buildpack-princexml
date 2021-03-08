@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: serif; /* Thai */
-    src: prince-lookup("Taviraj-Regular")
+    src: prince-lookup("Taviraj")
 }
 
 @font-face {
